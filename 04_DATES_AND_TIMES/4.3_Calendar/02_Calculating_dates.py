@@ -1,7 +1,7 @@
 import calendar
 import pprint
 pprint.pprint(calendar.monthcalendar(2011, 7))
-
+print [i for i in calendar.monthcalendar(2011, 7)]
 print '==========================================='
 for month in range(1,13):
 	c = calendar.monthcalendar(2011, month)
