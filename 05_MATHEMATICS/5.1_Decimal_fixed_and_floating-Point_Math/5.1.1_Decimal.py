@@ -1,0 +1,18 @@
+import decimal
+
+fmt = '{0:<25} {1:<25}'
+print fmt.format('Input','Output')
+print fmt.format('-'*25,'-'*25)
+#Integer
+print fmt.format(5,decimal.Decimal(5))
+#String
+print fmt.format('3.14',decimal.Decimal('3.14'))
+#Float
+f = 0.1
+print fmt.format(repr(f),decimal.Decimal(str(f)))
+print fmt.format('%.23g' % f,str(decimal.Decimal.from_float(f))[:25])
+
+print '##################################'
+t = (1,(1,1),-2)
+print "Input  :",t
+print 'Decimal:',decimal.Decimal(t)
